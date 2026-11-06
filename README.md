@@ -17,6 +17,16 @@ API REST para administrar un catálogo de productos, con operaciones CRUD y carg
 
 Las respuestas devuelven códigos HTTP según el resultado (`200`, `400`, `404`, `500`). Los datos de entrada se reciben con DTOs (`ProductoDto`, `AgregarImagenDto`).
 
+## 🧪 Pruebas con Postman
+
+**`GET /api/Productos`**: devuelve el listado de productos con su marca, categoría, precio e imágenes.
+
+![GET /api/Productos en Postman: respuesta 200 OK con el listado de productos en JSON](docs/postman-get-productos.png)
+
+**`POST /api/Productos` con datos incompletos**: la validación rechaza el pedido con `400 Bad Request` y un mensaje claro.
+
+![POST /api/Productos en Postman: respuesta 400 Bad Request "Faltan datos obligatorios del producto."](docs/postman-post-validacion.png)
+
 ## 🧱 Arquitectura
 
 ```
